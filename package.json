@@ -1,16 +1,16 @@
 {
   "name": "mepteglobal-angular",
   "version": "0.0.0",
-  "homepage": "https://mepteqglobal.github.io/Mepteglobal_Angular",
+  "homepage": "https://mepteqglobal.github.io/MepteglobalAngular",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:gh-pages": "ng build --configuration production --output-mode static --output-path dist/static/browser --base-href /Mepteglobal_Angular/",
+    "build:gh-pages": "ng build --configuration production --output-mode static --output-path dist/static/browser --base-href /MepteglobalAngular/",
     "deploy": "npm run build:gh-pages && gh-pages -d dist/static/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:Mepteglobal_Angular": "node --env-file=.env dist/Mepteglobal_Angular/server/server.mjs"
+    "serve:ssr:Mepteglobal_Angular": "node --env-file=.env dist/MepteglobalAngular/server/server.mjs"
   },
   "private": true,
   "packageManager": "npm@11.11.1",
