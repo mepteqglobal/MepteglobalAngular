@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "Mepteglobal_Angular": {
+    "MepteglobalAngular": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -75,10 +75,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Mepteglobal_Angular:build:production"
+              "buildTarget": "MepteglobalAngular:build:production"
             },
             "development": {
-              "buildTarget": "Mepteglobal_Angular:build:development"
+              "buildTarget": "MepteglobalAngular:build:development"
             }
           },
           "defaultConfiguration": "development"

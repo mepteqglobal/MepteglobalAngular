@@ -10,7 +10,7 @@
     "deploy": "npm run build:gh-pages && gh-pages -d dist/static/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:Mepteglobal_Angular": "node --env-file=.env dist/MepteglobalAngular/server/server.mjs"
+    "serve:ssr:MepteglobalAngular": "node --env-file=.env dist/MepteglobalAngular/server/server.mjs"
   },
   "private": true,
   "packageManager": "npm@11.11.1",
