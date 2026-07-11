@@ -1,0 +1,115 @@
+<section id="services" class="services-section">
+  <div class="services-shell">
+    <div class="services-intro">
+      <span class="services-kicker">OUR SERVICES</span>
+      <h2>Engineering disciplines delivered with one coordinated vision.</h2>
+      <p>
+        Explore our core service verticals across plumbing, fire protection,
+        electrical, ELV and HVAC systems. Every scope below is included as part
+        of our multidisciplinary design and consultancy delivery.
+      </p>
+    </div>
+
+
+      <!-- ── Services Offered ── -->
+  <div class="offered-section">
+    <div class="offered-header">
+      <span class="services-kicker">WHAT WE DO</span>
+    </div>
+
+    <div class="offered-layout">
+      <div class="offered-col">
+        <div class="offered-item" *ngFor="let s of offeredLeft">
+          <div class="offered-pill" [style.background]="s.bg">
+            <span class="offered-name">{{ s.title }}</span>
+            <span class="offered-num" [style.background]="s.accent">{{ s.num }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="offered-hub-wrap">
+        <div class="offered-hub">
+          <span>Services<br>offered</span>
+        </div>
+      </div>
+
+      <div class="offered-col">
+        <div class="offered-item" *ngFor="let s of offeredRight">
+          <div class="offered-pill offered-pill--flip" [style.background]="s.bg">
+            <span class="offered-num" [style.background]="s.accent">{{ s.num }}</span>
+            <span class="offered-name">{{ s.title }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="services-stack">
+      <article class="service-block" *ngFor="let category of serviceCategories">
+        <div class="service-heading">
+          <div class="service-heading-copy">
+            <h3>{{ category.title }}</h3>
+            <div class="service-heading-line"></div>
+            <p>{{ category.subtitle }}</p>
+          </div>
+          <button
+            class="collapse-toggle"
+            type="button"
+            (click)="toggleCategory(category.title)"
+            [attr.aria-expanded]="!isCollapsed(category.title)"
+          >
+            <span>{{ isCollapsed(category.title) ? 'Show' : 'Hide' }}</span>
+            <span class="collapse-icon">{{ isCollapsed(category.title) ? '+' : '−' }}</span>
+          </button>
+        </div>
+
+        <ng-container *ngIf="!isCollapsed(category.title)">
+          <p class="service-description">{{ category.description }}</p>
+
+          <div class="service-card-grid">
+          <div
+            class="service-card"
+            *ngFor="let capability of category.capabilities"
+            [style.--service-accent]="capability.accent"
+          >
+            <span class="service-icon" [attr.aria-label]="capability.title + ' icon'">{{ capability.icon }}</span>
+            <span class="service-name">{{ capability.title }}</span>
+          </div>
+        </div>
+
+          <div class="service-visual-grid">
+            <article class="service-visual" *ngFor="let visual of category.visuals" [ngClass]="visual.theme">
+              <div class="visual-overlay"></div>
+              <div class="visual-content">
+                <span>{{ visual.eyebrow }}</span>
+                <h4>{{ visual.title }}</h4>
+                <p>{{ visual.summary }}</p>
+              </div>
+            </article>
+          </div>
+        </ng-container>
+      </article>
+    </div>
+  </div>
+
+
+
+  <!-- ── 23 Years Excellence Timeline ── -->
+  <div class="excellence-section">
+    <div class="excellence-header">
+      <h2>Showcasing 23 Years of Global MEP Project Excellence</h2>
+      <p>Highlighting 500+ diverse projects across commercial, residential, hospitality, and industrial sectors worldwide</p>
+    </div>
+
+    <div class="timeline-wrap">
+      <div class="timeline-track"></div>
+      <div class="timeline-item" *ngFor="let item of timelineItems">
+        <div class="timeline-bubble" [style.background]="item.color">{{ item.num }}</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h4>{{ item.title }}</h4>
+          <p [innerHTML]="item.text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
