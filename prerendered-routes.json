@@ -1,3 +1,9 @@
 {
-  "routes": {}
+  "routes": {
+    "/MepteglobalAngular": {},
+    "/MepteglobalAngular/about": {},
+    "/MepteglobalAngular/contact": {},
+    "/MepteglobalAngular/partners": {},
+    "/MepteglobalAngular/projects": {}
+  }
 }
