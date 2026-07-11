@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "Mepteglobal_Angular": {
+    "MepteglobalAngular": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "baseHref": "/MepteglobalAngular/",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -77,10 +78,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Mepteglobal_Angular:build:production"
+              "buildTarget": "MepteglobalAngular:build:production"
             },
             "development": {
-              "buildTarget": "Mepteglobal_Angular:build:development"
+              "buildTarget": "MepteglobalAngular:build:development"
             }
           },
           "defaultConfiguration": "development"
